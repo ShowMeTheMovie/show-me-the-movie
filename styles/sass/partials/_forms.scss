@@ -1,1 +1,21 @@
-/* form styles */ 
+/* form styles */
+input {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px 5px 15px;
+}
+
+button {
+    width: 90px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(230, 230, 230);
+}

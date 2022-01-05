@@ -208,7 +208,22 @@ template {
   margin: 0 auto;
 }
 
+h1 {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  font-family: "Roboto";
+}
+
 /* header styles */
+header {
+  background-color: #313131;
+  padding-bottom: 40px;
+}
+
 .pageHeader {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,23 +231,34 @@ template {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
+  color: white;
 }
 
-/* footer styles */
-footer {
-  background-color: #919191;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-top: 50px;
+/* form styles */
+input {
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 15px 5px 15px;
 }
 
-footer p {
-  font-size: 18px;
-  letter-spacing: 1px;
+button {
+  width: 90px;
   text-align: center;
-  color: #f6f6f6;
-  padding: 10px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #e6e6e6;
 }
 
 /* footer styles */
