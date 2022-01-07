@@ -1,0 +1,13 @@
+/* header styles */
+header {
+    background-color: rgb(49, 49, 49);
+    padding-bottom: 40px;
+}
+
+.pageHeader {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
