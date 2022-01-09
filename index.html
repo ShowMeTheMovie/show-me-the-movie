@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <title>Project 2</title>
 </head>
@@ -17,12 +17,10 @@
         <div class="pageHeader">
             <h1>Show Me The Movie</h1>
 
-            <!-- form for user search -->
             <div class="formContainer">
                 <form action="submit">
-                    <label for="movie"></label>
-                    <input type="text" id="movie" placeholder="search movie" name="movie" required>
-                    <button type="submit">Submit</button>
+                    <input type="text" id="movie-search" placeholder="Sherlock" onkeyup="movieApp.findMovies()">
+                    <button type="submit" id="search-button">Submit</button>
                 </form>
             </div>
         </div>
@@ -32,17 +30,11 @@
 <body>
     <div class="wrapper">
 
-        <!-- movie list -->
-        <div class="movieList">
-
-            <!-- movie cards -->
-            <div class="movieCard">
-                <ul class="movieGallery" id="gallery">
-                    <!-- movie gallery populates here -->
-
-                </ul>
-            </div>
-            
+        <!-- movie container -->
+        <div class="movieContainer">
+            <ul id="movies">
+                <!-- movies populate here -->
+            </ul>
         </div>
     </div>
 </body>

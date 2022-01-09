@@ -1,13 +1,16 @@
 /* header styles */
 header {
-    background-color: rgb(49, 49, 49);
-    padding-bottom: 40px;
+    background-image: url("../../p02files/assets/theater1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
 }
 
 .pageHeader {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
     color: white;
+    padding-top: 100px;
 }

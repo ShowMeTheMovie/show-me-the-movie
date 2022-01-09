@@ -1,0 +1,26 @@
+ul {
+    text-align: center;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+li p {
+    background-color: black;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 270px;
+    padding: 25px;
+}
+
+img {
+    height: 100%;
+    border: 10px solid black;
+}   
