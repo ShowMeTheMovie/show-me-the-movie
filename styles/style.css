@@ -208,9 +208,19 @@ template {
   margin: 0 auto;
 }
 
+.movieContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 h1 {
-  font-family: "Montserrat";
+  font-family: "Limelight";
   text-transform: uppercase;
+  font-size: 3.5rem;
   letter-spacing: 1px;
 }
 
@@ -220,23 +230,26 @@ p {
 
 /* header styles */
 header {
-  background-color: #313131;
-  padding-bottom: 40px;
+  background-image: url("../../p02files/assets/theater1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
 }
 
 .pageHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   color: white;
+  padding-top: 100px;
 }
 
 /* form styles */
@@ -259,6 +272,38 @@ button {
 button:hover {
   cursor: pointer;
   background-color: #e6e6e6;
+}
+
+ul {
+  text-align: center;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 25px;
+  margin: 0 auto;
+}
+
+li p {
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  width: 270px;
+  padding: 25px;
+}
+
+img {
+  height: 100%;
+  border: 10px solid black;
 }
 
 /* footer styles */
