@@ -1,48 +1,19 @@
 const movieApp = {}
 
-movieApp.init = () => {
-	// movieApp.getMovies()
-	movieApp.findMovies()
-	movieApp.displayMovieList()
-	// movieApp.displayMovies()
-}
-
-
-
-// movieApp.apikey = '2610afcc'
-// movieApp.url = `http://www.omdbapi.com/`
-
 const movieSearchBox = document.querySelector('#movie');
 const searchList = document.querySelector('#searchList');
 
 
+movieApp.init = () => {
+	movieApp.findMovies()
+}
 
-// movieApp.getMovies = (query) =>{
-
-// 	const url = new URL(movieApp.url)
-// 	url.search = new URLSearchParams({
-// 		apikey: movieApp.apikey,
-// 		s: `${query}`
-// 	})   
-// 	fetch(url)
-// 	.then((response) => response.json())
-// 	.then((jsonData) => {
-// 		const results = jsonData.map(element => element.title)
-// 		console.log(results);
-// 	})
-// }
-
-// movieApp.getMovies = () => {
 async function loadMovies(query) {
 	const url = `https://omdbapi.com/?s=${query}&page=1&apikey=2610afcc`;
 	const res = await fetch(`${url}`);
 	const data = await res.json();
-	// console.log(data.Search);
-	if (data.Response) { movieApp.displayMovieList(data.Search) };
+	if (data.Response === 'True') { movieApp.displayMovieList(data.Search) };
 }
-// }
-
-
 
 
 movieApp.findMovies = () => {
@@ -80,6 +51,4 @@ movieApp.displayMovieList = (movies) => {
 	}
 }
 
-
 movieApp.init()
-
