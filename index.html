@@ -11,38 +11,26 @@
     <title>Project 2</title>
 </head>
 
-<!-- title hit -->
-<header>
-    <div class="wrapper">
-        <div class="pageHeader">
-            <h1>Show Me The Movie</h1>
-
-            <div class="formContainer">
-                <form action="submit">
-                    <input type="text" id="movie-search" placeholder="Sherlock" onkeyup="movieApp.findMovies()">
-                    <button type="submit" id="search-button">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</header>
-
 <body>
-    <div class="wrapper">
+  <div class="wrapper">
 
-        <!-- movie container -->
-        <div class="movieContainer">
-            <ul id="movies">
-                <!-- movies populate here -->
-            </ul>
-        </div>
-    </div>
+		<h1>Show Me The Movie</h1>
+
+		<div class="findMoviesContainer">
+
+			<label for="movie"></label>
+			<input type="text" id="movie" placeholder="movie search" name="movie" onkeyup="movieApp.findMovies()">
+		</div>
+      
+		<div class="searchMoviesContainer">
+			<ul class="searchList" id="searchList">
+			</ul>
+		</div>
+
+	</div>
+    
+    <script src="scripts.js"></script>
+    
 </body>
-
-<footer>
-    <p>Created at Juno College &copy;</p>
-</footer>
-
-
-<script src="javascript/scripts.js"></script>
+    
 </html>
