@@ -1,13 +1,16 @@
+// create namespace
 const movieApp = {}
 
 const movieSearchBox = document.querySelector('#movie');
 const searchList = document.querySelector('#searchList');
 
-
+// initialize function
 movieApp.init = () => {
+	// global selector
 	movieApp.findMovies()
 }
 
+// getting movies from the oMDB API
 async function loadMovies(query) {
 	const url = `https://omdbapi.com/?s=${query}&page=1&apikey=2610afcc`;
 	const res = await fetch(`${url}`);
@@ -15,7 +18,7 @@ async function loadMovies(query) {
 	if (data.Response === 'True') { movieApp.displayMovieList(data.Search) };
 }
 
-
+// search movies based on user inputted query from the searchbar
 movieApp.findMovies = () => {
 	let query = (movieSearchBox.value).trim();
 	if (query.length > 0) {
@@ -26,7 +29,7 @@ movieApp.findMovies = () => {
 	}
 }
 
-
+// display movies we receive from the API to the page
 movieApp.displayMovieList = (movies) => {
 	searchList.innerHTML = "";
 	for (let i = 0; i < movies.length; i++) {
@@ -44,11 +47,12 @@ movieApp.displayMovieList = (movies) => {
         </li>
         <li>
             <h3>${movies[i].Title}</h3>
-            <p>${movies[i].Year}</p>
+            <p>Released ${movies[i].Year}</p>
         </li>
         `;
 		searchList.appendChild(movieListItem);
 	}
 }
 
+// call init function
 movieApp.init()
