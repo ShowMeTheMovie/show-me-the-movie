@@ -6,7 +6,6 @@ const searchList = document.querySelector('#searchList');
 
 // initialize function
 movieApp.init = () => {
-	// global selector
 	movieApp.findMovies()
 }
 
